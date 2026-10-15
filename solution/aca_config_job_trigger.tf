@@ -1,6 +1,11 @@
+data "azurerm_container_app_job" "enterprise_sql_config_job" {
+  name                = var.aca_enterprise_sql_config_job_name
+  resource_group_name = var.resource_group_name
+}
+
 resource "azapi_resource_action" "start" {
   type        = "Microsoft.App/jobs@2026-01-01"
-  resource_id = var.aca_config_job_trigger_id
+  resource_id = data.azurerm_container_app_job.enterprise_sql_config_job.id
   action      = "start"
   method      = "POST"
 

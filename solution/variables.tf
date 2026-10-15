@@ -11,7 +11,7 @@ variable "location" {
   default = "centralus"
 }
 
-variable "aca_config_job_trigger_id" {
+variable "aca_enterprise_sql_config_job_name" {
   type = string
 }
 
@@ -28,5 +28,9 @@ variable "migrations_group_display_name" {
 }
 
 variable "migrations_group_object_id" {
+  type = string
+}
+
+variable "container_name" {
   type = string
 }
