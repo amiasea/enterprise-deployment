@@ -19,15 +19,7 @@ variable "data_access_group_display_name" {
   type = string
 }
 
-variable "data_access_group_object_id" {
-  type = string
-}
-
 variable "migrations_group_display_name" {
-  type = string
-}
-
-variable "migrations_group_object_id" {
   type = string
 }
 

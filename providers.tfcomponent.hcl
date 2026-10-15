@@ -1,18 +1,23 @@
 required_providers {
-azurerm = {
-  source  = "hashicorp/azurerm"
-  version = "~> 5.9"
-}
+  azurerm = {
+    source  = "hashicorp/azurerm"
+    version = "~> 5.9"
+  }
 
-azuread = {
-  source  = "hashicorp/azuread"
-  version = "~> 3.10"
-}
+  azuread = {
+    source  = "hashicorp/azuread"
+    version = "~> 3.10"
+  }
 
-azapi = {
-  source  = "Azure/azapi"
-  version = "~> 2.13"
-}
+  azapi = {
+    source  = "Azure/azapi"
+    version = "~> 2.13"
+  }
+
+  # mssql = {
+  #   source = "muecahit94/mssql"
+  #   version = "~> 1.8.2"
+  # }
 }
 
 provider "azurerm" "this" {
@@ -52,14 +57,8 @@ provider "azapi" "this" {
   }
 }
 
-provider "github" "this" {
-  config {
-    owner = var.organization_name
+# provider "mssql" "this" {
+#   hostname = "${var.azurerm_mssql_server_name}.database.windows.net"
 
-    app_auth {
-      id              = var.github_app_id
-      installation_id = var.github_app_installation_id
-      pem_file        = component.whisper_genie.amiasea_github_app_private_key
-    }
-  }
-}
+#   azure_auth {}
+# }

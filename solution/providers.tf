@@ -16,5 +16,10 @@ terraform {
       source  = "Azure/azapi"
       version = "~> 2.13"
     }
+
+    # mssql = {
+    #   source = "muecahit94/mssql"
+    #   version = "~> 1.8.2"
+    # }
   }
 }

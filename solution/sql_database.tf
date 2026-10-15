@@ -31,3 +31,26 @@ resource "azapi_resource" "amiasea_database" {
     }
   }
 }
+
+# resource "mssql_azuread_user" "enterprise_sql_migrations" {
+#   database_name = azapi_resource.amiasea_database.name
+#   name          = var.migrations_group_display_name
+#   object_id     = data.azuread_group.enterprise_sql_migrations.object_id
+
+#   roles = [
+#     "db_ddladmin",
+#     "db_datareader",
+#     "db_datawriter"
+#   ]
+# }
+
+# resource "mssql_azuread_user" "enterprise_sql_data_access" {
+#   database_name = azapi_resource.amiasea_database.name
+#   name          = var.data_access_group_display_name
+#   object_id     = data.azuread_group.enterprise_sql_data_access.object_id
+
+#   roles = [
+#     "db_datawriter",
+#     "db_datareader"
+#   ]
+# }
