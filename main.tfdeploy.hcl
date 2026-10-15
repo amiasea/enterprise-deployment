@@ -20,7 +20,6 @@ deployment "prospective" {
 
 deployment "operative" {
   inputs = {
-    organization_name                  = "amiasea"
     azure_tenant_id                    = "bf451fd9-d382-4da8-9c1a-179a96a4d2f3"
     azure_client_id                    = "8893e5ad-3000-481c-8a3c-faca9820bc89"
     azure_subscription_id              = "d9cd6518-e401-4072-a410-a6a67e9b15f6"
