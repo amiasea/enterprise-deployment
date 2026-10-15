@@ -4,7 +4,6 @@ identity_token "azure" {
 
 deployment "prospective" {
   inputs = {
-    organization_name                  = "amiasea"
     azure_tenant_id                    = "bf451fd9-d382-4da8-9c1a-179a96a4d2f3"
     azure_client_id                    = "3a52b666-293d-42e5-9a08-a330f3779bb7"
     azure_subscription_id              = "a1a3e3e6-6a34-455d-b220-f6df7790f905"
